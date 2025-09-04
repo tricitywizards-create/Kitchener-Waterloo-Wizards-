@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U11 Boys Rep Team Tryouts - KW Wizards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      color: #333;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.3in;
+      line-height: 1.1;
+      page-break-inside: avoid;
+      min-height: 11in;
+      max-height: 11in;
+      overflow: hidden;
+    }
+    
+    .flyer-container {
+      border: 8px solid #6a0dad;
+      border-radius: 20px;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 0 30px rgba(106, 13, 173, 0.3);
+      position: relative;
+      height: fit-content;
+      max-height: calc(11in - 0.6in);
+    }
+    
+    .flyer-container::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      background: linear-gradient(45deg, #89CFF0, #6a0dad, #89CFF0, #6a0dad);
+      border-radius: 24px;
+      z-index: -1;
+    }
+    /* Header section */
+    .header {
+      text-align: center;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+
+    .logo-img {
+      width: 260px;
+      height: auto;
+      margin: 0 auto 0.5rem;
+      display: block;
+      filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
+    }
+
+    .logo-text {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+      color: #6a0dad;
+      font-weight: 600;
+    }
+
+    /* Main announcement */
+    .main-announcement {
+      background: #000;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .main-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #ff4444;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .season-info {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #89CFF0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* U11 Focus section */
+    .u11-focus {
+      text-align: center;
+      margin-bottom: 2rem;
+      background: rgba(255,68,68,0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 3px solid #ff4444;
+    }
+
+    .u11-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ff4444;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .u11-badge {
+      background: linear-gradient(135deg, #ff4444, #ff6666);
+      color: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      font-size: 3rem;
+      font-weight: 900;
+      border: 4px solid #000;
+      display: inline-block;
+      min-width: 250px;
+      box-shadow: 0 0 25px rgba(255,68,68,0.5);
+      margin: 1rem;
+    }
+
+    .age-info {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #6a0dad;
+      margin-top: 1rem;
+    }
+
+    .tryout-alert {
+      background: #ff4444;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      border: 2px solid #000;
+    }
+
+    /* Benefits section */
+    .benefits-section {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 2px solid #6a0dad;
+    }
+
+    .benefits-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #6a0dad;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .benefit-item {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 2px solid #89CFF0;
+      text-align: center;
+    }
+
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: #6a0dad;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .benefit-text {
+      font-weight: 600;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    /* Tryout requirements */
+    .requirements-box {
+      background: #fff3cd;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 3px solid #ffc107;
+      margin-bottom: 1.5rem;
+    }
+
+    .requirements-title {
+      color: #856404;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      text-align: left;
+    }
+
+    .requirement-item {
+      color: #856404;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* What players get */
+    .players-get-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 3px solid #89CFF0;
+    }
+
+    .players-get-title {
+      color: #6a0dad;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .players-get-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      text-align: left;
+    }
+
+    .players-get-item {
+      color: #333;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Call to action */
+    .cta-section {
+      background: #000;
+      color: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 4px solid #89CFF0;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .urgency-banner {
+      background: #ff4444;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 20px rgba(255,68,68,0.5);
+    }
+
+    .cta-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #89CFF0;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 8px #89CFF0;
+    }
+
+    .tryout-info-box {
+      background: rgba(255,68,68,0.2);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border: 3px solid #ff4444;
+    }
+
+    .tryout-alert-title {
+      color: #ff4444;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .tryout-details {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .tryout-details p {
+      margin-bottom: 0.8rem;
+    }
+
+    .tip-box {
+      background: rgba(137,207,240,0.2);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border: 2px solid #89CFF0;
+    }
+
+    .tip-text {
+      color: #89CFF0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .action-item {
+      text-align: center;
+      flex: 1;
+      max-width: 250px;
+    }
+
+    .action-title {
+      background: #89CFF0;
+      color: #000;
+      padding: 1.2rem;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      border: 2px solid #000;
+    }
+
+    .action-description {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* Contact section */
+    .contact-section {
+      background: #6a0dad;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 3px solid #89CFF0;
+    }
+
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #89CFF0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #89CFF0;
+    }
+
+    .contact-label {
+      font-weight: 700;
+      color: #89CFF0;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-value {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .social-info {
+      color: #89CFF0;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+
+    .copyright {
+      color: #333;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* High contrast highlights */
+    .highlight-box {
+      background: #89CFF0;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      display: inline-block;
+      margin: 0.3rem;
+      border: 2px solid #000;
+    }
+
+    /* Print optimizations */
+    @media print {
+      body {
+        padding: 0.4in;
+        font-size: 10pt;
+      }
+      
+      .logo-text {
+        font-size: 2rem !important;
+      }
+      
+      .header {
+        margin-bottom: 0.5rem !important;
+      }
+      
+      
+      .main-announcement {
+        background: #000 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .u11-badge {
+        background: #ff4444 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .contact-section {
+        background: #6a0dad !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .urgency-banner {
+        background: #ff4444 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      
+      .tryout-info-box {
+        background: rgba(255,68,68,0.1) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .benefits-grid, .requirements-grid, .players-get-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .logo-text {
+        font-size: 2rem;
+      }
+      
+      .main-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer-container">
+    <div class="header">
+      <img src="images/New Wizards Logo .png" alt="KW Wizards Logo" class="logo-img">
+      <p class="tagline">"Magic on the Court"</p>
+    </div>
+
+    <!-- Main Content -->
+    <div style="text-align: center; margin-bottom: 0.5rem;">
+      <h2 style="font-size: 2rem; font-weight: 900; color: #ff4444; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); line-height: 1.1;">
+        U11 BOYS REP TEAM TRYOUTS
+      </h2>
+      <p style="font-size: 1.1rem; color: #6a0dad; font-weight: 800; margin-bottom: 0.3rem; text-transform: uppercase;">
+        Ages 10-11 • Born 2014-2015 • 2025-26 Season
+      </p>
+      <p style="font-size: 1.2rem; color: #ff4444; font-weight: 900; margin-bottom: 0.5rem; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+        TRYOUTS ANNOUNCED SOON - REGISTER NOW
+      </p>
+    </div>
+    
+    <!-- Two Column Layout -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 0.8rem;">
+      
+      <!-- Left Column -->
+      <div>
+        <h3 style="font-size: 1.2rem; color: #6a0dad; font-weight: 800; margin-bottom: 0.6rem; text-transform: uppercase; border-bottom: 2px solid #6a0dad; padding-bottom: 0.2rem;">REP TEAM BENEFITS</h3>
+        <div style="font-size: 0.95rem; line-height: 1.3;">
+          <p style="margin-bottom: 0.3rem; color: #333;">• Competitive tournaments & championships</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Elite coaching & professional development</p>
+          <p style="margin-bottom: 0.3rem; color: #333; background: #fff3cd; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">• <strong>Year-round training (September - August)</strong></p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Advanced skills & elite level basketball</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Team uniform & equipment package</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• 3-4 practices per week + 25+ games</p>
+        </div>
+        
+        <h3 style="font-size: 1.2rem; color: #ff4444; font-weight: 800; margin: 1rem 0 0.6rem; text-transform: uppercase; border-bottom: 2px solid #ff4444; padding-bottom: 0.2rem;">REQUIREMENTS</h3>
+        <div style="font-size: 0.9rem; line-height: 1.3;">
+          <p style="margin-bottom: 0.3rem; color: #333;">• Previous basketball experience required</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Full season commitment needed</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Attend all practices & games</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Strong work ethic & team attitude</p>
+          <p style="margin-bottom: 0.3rem; color: #333;">• Ready for competitive level play</p>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div>
+        <h3 style="font-size: 1.2rem; color: #ff4444; font-weight: 800; margin-bottom: 0.6rem; text-transform: uppercase; border-bottom: 2px solid #ff4444; padding-bottom: 0.2rem;">TRYOUT INFORMATION</h3>
+        <div style="font-size: 0.95rem; line-height: 1.3; margin-bottom: 1rem;">
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Dates:</strong> TBA - Coming very soon!</p>
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Time:</strong> Evening sessions (after school)</p>
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Location:</strong> Kitchener-Waterloo area gyms</p>
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Format:</strong> Skills assessment & scrimmage</p>
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>What to bring:</strong> Basketball shoes, water bottle</p>
+        </div>
+        
+        <div style="color: #89CFF0; text-align: center; font-weight: 900; margin-bottom: 1rem; font-size: 1.1rem; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(137,207,240,0.3);">
+          REGISTER NOW FOR TRYOUT NOTIFICATIONS
+        </div>
+        
+        <h3 style="font-size: 1.2rem; color: #6a0dad; font-weight: 800; margin-bottom: 0.6rem; text-transform: uppercase; border-bottom: 2px solid #6a0dad; padding-bottom: 0.2rem;">CONTACT</h3>
+        <div style="font-size: 0.95rem; line-height: 1.3;">
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Email:</strong> tricitywizards@gmail.com</p>
+          <p style="margin-bottom: 0.3rem; color: #333;"><strong>Phone:</strong> 1-416-419-0964</p>
+          <p style="color: #6a0dad; font-weight: 700; font-size: 1rem;">kw-wizards.ca</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; border-top: 1px solid #6a0dad; padding: 0.5rem; margin-top: 0.8rem;">
+      <p style="font-size: 0.85rem; font-weight: 600; color: #6a0dad; margin-bottom: 0.2rem;">
+        Follow for updates: @KWWizards (Instagram & Facebook)
+      </p>
+      <p style="font-size: 0.8rem; color: #333;">2025 Kitchener-Waterloo Wizards Basketball | "Magic on the Court"</p>
+    </div>
+  </div>
+
+
+  <script>
+    // Print button functionality
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'p' || e.key === 'P') {
+        e.preventDefault();
+        window.print();
+      }
+    });
+
+    // Add print button
+    const printBtn = document.createElement('button');
+    printBtn.innerHTML = '🖨️ PRINT FLYER';
+    printBtn.style.cssText = `
+      position: fixed;
+      top: -10px;
+      right: 20px;
+      background: #89CFF0;
+      color: #000;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    `;
+    printBtn.onclick = () => window.print();
+    document.body.appendChild(printBtn);
+
+    // Hide print button when printing
+    window.addEventListener('beforeprint', () => {
+      printBtn.style.display = 'none';
+      document.querySelector('div[style*="Print Instructions"]').style.display = 'none';
+    });
+
+    window.addEventListener('afterprint', () => {
+      printBtn.style.display = 'block';
+      document.querySelector('div[style*="Print Instructions"]').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
